@@ -133,6 +133,9 @@
         <option value="4-5 lakh">4-5 lakh</option>
       </select>
 
+      <label>Languages Required:</label>
+      <input type="text" name="Languages" placeholder="Languages known" required>
+
       <label>Reason for New Requirement</label>
       <textarea name="reason" rows="3" placeholder="Describe why this position is needed"></textarea>
     </div>
@@ -180,7 +183,7 @@
       formData.forEach((value, key) => (data[key] = value));
 
       try {
-        const res = await fetch("https://wowflo.io/webhook/requirement-submit", {
+        const res = await fetch("https://wowflo.io/webhook-test/requirement-submit", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data),
@@ -199,4 +202,3 @@
   </script>
 </body>
 </html>
-
